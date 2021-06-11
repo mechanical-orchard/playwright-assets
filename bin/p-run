@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+: ${PROJECT:?'UNDEFINED - Be sure to `direnv allow` first'}
+
+# development...
+# pushd ${PROJECT} > /dev/null
+#   npm run dev:serve
+# popd > /dev/null
+
+# container...
+docker run -it --rm \
+  --network playwright \
+  --network-alias playwright-assets \
+  -e WEBSERVER_PORT \
+  -p ${WEBSERVER_PORT}:${WEBSERVER_PORT} \
+  -d \
+  ${DOCKER_TAG}
