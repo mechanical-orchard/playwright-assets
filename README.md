@@ -29,6 +29,7 @@ To make updates to the assets pulled from Playwright and embedded here, try the 
 
 ```shell
 git remote add --fetch --master master --no-tags playwright https://github.com/microsoft/playwright.git
+git rm -r assets
 git read-tree --prefix=assets -u playwright/master:tests/assets
 ```
 
