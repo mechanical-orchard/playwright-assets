@@ -72,7 +72,7 @@ defmodule PlaywrightAssets.MixProject do
         homepage: @source_url,
         source: @source_url
       },
-      files: ~w(assets lib priv LICENSE LICENSE_APACHE mix.exs package.json README.md)
+      files: ~w(lib priv LICENSE LICENSE_APACHE mix.exs package.json README.md)
     ]
   end
 end
