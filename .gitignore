@@ -1,7 +1,40 @@
-.local
 .vscode
 
 /pkg
 /tmp
 
 node_modules
+
+# Elixir stuff...
+
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where third-party dependencies like ExDoc output generated docs.
+/doc/
+/priv/plts
+/.elixir_ls
+/rebar.lock
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+/.fetch
+
+# Ignore .private files where things
+/.local
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+playwright-*.tar
+
+# Temporary files for e.g. tests
+/tmp
+
+.vscode
