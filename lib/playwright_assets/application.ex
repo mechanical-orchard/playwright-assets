@@ -5,10 +5,7 @@ defmodule PlaywrightAssets.Application do
 
   @impl Application
   def start(_, _) do
-    port =
-      Application.get_env(:playwright_assets, :port)
-      |> IO.inspect(label: "PORT")
-
+    port = Application.get_env(:playwright_assets, :port)
     Logger.info("Starting Playwright Assets server at http://localhost:#{port}")
 
     children = [
