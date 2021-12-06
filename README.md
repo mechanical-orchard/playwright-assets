@@ -37,6 +37,10 @@ branch="release-1.17"
 git fetch playwright
 git rm -r priv/assets
 git read-tree --prefix=priv/assets -u playwright/${branch}:tests/assets
+
+# Remove selenium-grid asset path. It's WAY too big, and not useful outside of
+# the Node.js Playwright.
+rm -rf priv/assets/selenium-grid
 ```
 
 **NOTE: this might be out of date...**
