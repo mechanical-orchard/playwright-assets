@@ -33,7 +33,7 @@ To make updates to the assets pulled from Playwright and embedded here, try the 
 # once...
 git remote add --fetch --no-tags playwright https://github.com/microsoft/playwright.git
 
-branch="release-1.17"
+branch="release-1.18"
 git fetch playwright
 git rm -r priv/assets
 git read-tree --prefix=priv/assets -u playwright/${branch}:tests/assets
