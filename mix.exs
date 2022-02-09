@@ -40,12 +40,12 @@ defmodule PlaywrightAssets.MixProject do
 
   defp deps do
     [
-      {:cowlib, "~> 2.11"},
+      {:cowlib, "~> 2.7.3"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.1", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.25", only: :dev, runtime: false},
       {:mix_audit, "~> 1.0", only: [:dev, :test], runtime: false},
-      {:plug_cowboy, "~> 2.5"},
+      {:plug_cowboy, "~> 2.1.3"},
       {:plug, "~> 1.12"}
     ]
   end
