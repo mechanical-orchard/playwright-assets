@@ -38,3 +38,5 @@ playwright-*.tar
 /tmp
 
 .vscode
+
+Brewfile.lock.json
