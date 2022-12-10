@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source ${REPO}/bin/lib.sh
+
+# ------------------------------------------------------------------------------
+# Usage:
+#
+#   dev <command>   [<args>...] [options]
+#
+# Description:
+#
+#   Project development tasks & utilities.
+#
+# Commands:
+#
+#    help           Print help text.
+#    version        Print version information.
+#
+# Options:
+#
+#   -h, --help      Print help text.
+#   -v, --version   Print version information.
+# ------------------------------------------------------------------------------
+
+_main_() {
+  cmd="${1:-}"
+
+  case "${cmd}" in
+    help | --help | -h )
+      cmd::usage "$@"
+      ;;
+    version | --version | -v )
+      _version_
+      ;;
+    * )
+      cmd::proxy ${cmd} "${@:2}"
+      ;;
+  esac
+}
+
+_version_() {
+  echo "v0.1.0"
+}
+
+_main_ "$@"
