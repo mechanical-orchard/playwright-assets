@@ -13,6 +13,7 @@ source ${REPO}/bin/lib.sh
 #
 # Commands:
 #
+#    serve          Run the (development) assets server.
 #    setup          Prepare the project for development and execution.
 #
 #    help           Print help text.

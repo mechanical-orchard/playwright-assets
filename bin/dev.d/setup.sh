@@ -16,6 +16,7 @@ source ${REPO}/bin/lib.sh
 #   - `brew bundle`  ... install package dependencies.
 #   - `asdf install` ... install versioned software dependencies.
 #   - `npm install`  ... install Node.js dependencies.
+#   - `mix deps.get` ... install Elixir dependencies.
 #
 # Options:
 #
@@ -31,6 +32,7 @@ _main_() {
     brew bundle
     asdf install
     npm install
+    mix deps.get
   popd > /dev/null
 }
 
