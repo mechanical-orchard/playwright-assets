@@ -33,6 +33,7 @@ _do_parse_() {
 }
 
 _do_usage_() {
+  echo "do usage"
   echo "$(_parse_help_ "$0" "$@")"
   exit 0
 }
@@ -83,6 +84,10 @@ _parse_help_() {
             sub("^# ", "", usage[i])
             sub("^#", "", usage[i])
             sub("^-{48,}", "", usage[i])
+
+            # handle inline code samples
+            gsub("\`", "\\`", usage[i])
+
             print usage[i]
         }
     }

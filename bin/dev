@@ -13,6 +13,8 @@ source ${REPO}/bin/lib.sh
 #
 # Commands:
 #
+#    setup          Prepare the project for development and execution.
+#
 #    help           Print help text.
 #    version        Print version information.
 #
