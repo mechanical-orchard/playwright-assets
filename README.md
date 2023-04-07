@@ -2,21 +2,11 @@
 
 ## Usage
 
-Unless you're doing development on this project (in which case, see "Contributing" below), you probably want to run the container along the lines of:
+Unless you're doing development on this project (in which case, see "Contributing" below), you probably want to run the container along the lines of what is found in `${REPO}/bin/dev.d/docker.sh`. And, assuming the project has been bootstrapped (see below), a Docker container for the server may be build and run as follows:
 
 ```shell
-export WEBSERVER_PORT=4002
-
-# prerequisite:
-# docker network create playwright
-
-docker run -it --rm \
-  --network playwright \
-  --network-alias playwright-assets \
-  -e WEBSERVER_PORT \
-  -p ${WEBSERVER_PORT}:${WEBSERVER_PORT} \
-  -d \
-  geometer/playwright-assets:latest
+dev docker build
+dev docker run
 ```
 
 If you are developing on [playwright-elixir](https://github.com:geometerio/playwright-elixir), this package is pulled in as a dependency there. Nothing to do unless you are updating this package itself (see "Contributing" below).
@@ -24,6 +14,14 @@ If you are developing on [playwright-elixir](https://github.com:geometerio/playw
 ## Licenses
 
 This project carries the ISC License. The assets are acquired from [microsoft/playwright](https://github.com/microsoft/playwright), which uses the Apache License (copied here, per the license terms).
+
+## Bootstrapping
+
+```shell
+brew bundle   # and ensure packages are set up (e.g., `asdf` needs shell integration)
+direnv allow  # add `${REPO}/bin` to $PATH, etc.
+dev setup     # see `${REPO}/bin/dev.d/setup.sh` for details
+```
 
 ## Contributing
 
@@ -42,7 +40,3 @@ git read-tree --prefix=priv/assets -u playwright/${branch}:tests/assets
 # the Node.js Playwright.
 rm -rf priv/assets/selenium-grid
 ```
-
-**NOTE: this might be out of date...**
-
-To run the server and build the image, see `bin/p-run` and `bin/p-build`, respectively. Note that when running the server in Docker, a prerequisite is `docker network create playwright`. This is in support of running [`playwright-proxy`](https://github.com/geometerio/playwright-proxy) in the same user-defined bridge network with the ability to reach the assets server for test runs (in `transport: websocket` mode).

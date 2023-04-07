@@ -30,6 +30,9 @@ _main_() {
 
   pushd ${REPO} > /dev/null
     brew bundle
+    asdf plugin add elixir || true > /dev/null
+    asdf plugin add erlang || true > /dev/null
+    asdf plugin add nodejs || true > /dev/null
     asdf install
     npm install
     mix deps.get
