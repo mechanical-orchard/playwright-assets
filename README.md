@@ -25,18 +25,4 @@ dev setup     # see `${REPO}/bin/dev.d/setup.sh` for details
 
 ## Contributing
 
-To make updates to the assets pulled from Playwright and embedded here, try the following:
-
-```shell
-# once...
-git remote add --fetch --no-tags playwright https://github.com/microsoft/playwright.git
-
-branch="release-1.18"
-git fetch playwright
-git rm -r priv/assets
-git read-tree --prefix=priv/assets -u playwright/${branch}:tests/assets
-
-# Remove selenium-grid asset path. It's WAY too big, and not useful outside of
-# the Node.js Playwright.
-rm -rf priv/assets/selenium-grid
-```
+To make updates to the assets pulled from Playwright and embedded here, and assuming the project has been bootstrapped, try `dev fetch <branch>` (e.g., `dev fetch release-1.32`). See `${REPO}/bin/dev.d/fetch.sh` for details.
