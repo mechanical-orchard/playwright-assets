@@ -1,4 +1,6 @@
 # A Server for Playwright Test Assets
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmechanical-orchard%2Fplaywright-assets.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmechanical-orchard%2Fplaywright-assets?ref=badge_shield)
+
 
 ## Usage
 
@@ -14,6 +16,9 @@ If you are developing on [playwright-elixir](https://github.com:geometerio/playw
 ## Licenses
 
 This project carries the ISC License. The assets are acquired from [microsoft/playwright](https://github.com/microsoft/playwright), which uses the Apache License (copied here, per the license terms).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmechanical-orchard%2Fplaywright-assets.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmechanical-orchard%2Fplaywright-assets?ref=badge_large)
 
 ## Bootstrapping
 
