@@ -25,4 +25,4 @@ dev setup     # see `${REPO}/bin/dev.d/setup.sh` for details
 
 ## Contributing
 
-To make updates to the assets pulled from Playwright and embedded here, and assuming the project has been bootstrapped, try `dev fetch <branch>` (e.g., `dev fetch release-1.32`). See `${REPO}/bin/dev.d/fetch.sh` for details.
+To make updates to the assets pulled from Playwright and embedded here, and assuming the project has been bootstrapped, try `dev fetch <branch>` (e.g., `dev fetch release-1.44`). See `${REPO}/bin/dev.d/fetch.sh` for details.
