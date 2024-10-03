@@ -10,7 +10,7 @@ defmodule PlaywrightAssets.MixProject do
         "Playwright Assets is a package for installing and running test assets in Playwright Node.js and Elixir implementations.",
       dialyzer: dialyzer(),
       docs: docs(),
-      version: "1.44.1",
+      version: "1.44.2",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
       homepage_url: @source_url,

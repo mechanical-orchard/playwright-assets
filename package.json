@@ -1,6 +1,6 @@
 {
   "name": "playwright-assets",
-  "version": "1.44.1",
+  "version": "1.44.2",
   "description": "A server for Playwright test assets",
   "main": "pkg/index.js",
   "files": [
