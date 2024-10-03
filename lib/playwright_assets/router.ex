@@ -25,13 +25,18 @@ defmodule PlaywrightAssets.Router do
   # ----------------------------------------------------------------------------
 
   defp respond_with(conn, path) do
-    body = File.read!("#{__DIR__}/../../priv/#{path}")
-    conn = put_resp_header(conn, "x-playwright-request-method", conn.method)
+    case File.read("#{__DIR__}/../../priv/#{path}") do
+      {:error, :enoent} ->
+        send_resp(conn, 404, "404")
 
-    conn =
-      (String.ends_with?(path, ".json") &&
-         put_resp_header(conn, "content-type", "application/json")) || conn
+      {:ok, body} ->
+        conn = put_resp_header(conn, "x-playwright-request-method", conn.method)
 
-    send_resp(conn, 200, body)
+        conn =
+          (String.ends_with?(path, ".json") &&
+             put_resp_header(conn, "content-type", "application/json")) || conn
+
+        send_resp(conn, 200, body)
+    end
   end
 end
