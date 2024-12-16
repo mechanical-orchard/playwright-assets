@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/playwright:focal
 
 LABEL description "Playwright assets server"
-LABEL version     "1.44.2"
+LABEL version     "1.49.1"
 LABEL maintainer  "corey@mechanical-orchard.com"
 
 WORKDIR /usr/local/playwright
