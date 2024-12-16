@@ -1,6 +1,6 @@
 defmodule PlaywrightAssets.MixProject do
   use Mix.Project
-  @source_url "https://github.com/geometerio/playwright-assets"
+  @source_url "https://github.com/mechanical-orchard/playwright-assets"
 
   def project do
     [
